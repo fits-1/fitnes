@@ -6,6 +6,7 @@
   <artifactId>fitness</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+         
     <dependencies>
         <!-- Add your dependencies here -->
         <dependency>
