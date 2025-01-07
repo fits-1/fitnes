@@ -1,0 +1,41 @@
+Feature: Account Management and User Monitoring
+
+
+  Scenario: Add a new instructor or client account
+    Given I am logged in as an admin
+    When I navigate to the "Accounts Management" page
+    And I click "Add New Account"
+    And I fill out the required details for the new account
+    And I select the role as "Instructor" or "Client"
+    And I click "Save"
+    Then the new account should be added successfully
+    And I should see a confirmation message
+
+  Scenario: Update an instructor or client account
+    Given I am logged in as an admin
+    When I navigate to the "Accounts Management" page
+    And I search for an existing account
+    And I update the account details
+    And I click "Save"
+    Then the account details should be updated successfully
+    And I should see a confirmation message
+
+  Scenario: Deactivate an instructor or client account
+    Given I am logged in as an admin
+    When I navigate to the "Accounts Management" page
+    And I search for an existing account
+    And I deactivate the account
+    Then the account should be deactivated successfully
+    And I should see a confirmation message
+
+  Scenario: Monitor user activity and engagement statistics
+    Given I am logged in as an admin
+    When I navigate to the "User Activity Dashboard"
+    And I apply a filter "dateRange" with value "Last 7 days"
+    Then I should see user activity data displayed
+
+  Scenario: Add a new instructor or client account
+    Given I am logged in as an admin
+    When I add a new account with the name "John Doe", email "john@example.com", and role "Instructor"
+    Then the new account should be added successfully
+    
