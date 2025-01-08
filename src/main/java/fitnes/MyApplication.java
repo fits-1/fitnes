@@ -30,7 +30,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        
 	        if (userDatabase11.containsKey(username) && userDatabase11.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("y");
+	            System.out.println(y);
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -102,7 +102,7 @@ y="Admin logged in successfully."
 	        
 	        if (userDatabase11.containsKey(username) && userDatabase11.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("y");
+	            System.out.println(y);
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -154,7 +154,7 @@ y="Admin logged in successfully."
 	        
 	        if (userDatabase14.containsKey(username) && userDatabase14.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("y");
+	            System.out.println(y);
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -236,7 +236,7 @@ y="Admin logged in successfully."
 	        
 	        if (userDatabase14.containsKey(username) && userDatabase14.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("y");
+	            System.out.println(y);
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
