@@ -12,8 +12,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.logging.Logger;
-
 
 import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 
@@ -23,14 +21,9 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	    private Map<String, String> userDatabase11 = new HashMap<>();
 	    private boolean isAdminLoggedIn1 = false;
 	    private String currentPage1 = "";
-		  Logger logger = Logger.getLogger(getClass().getName());
-
+		
 	    
-	    public void doSomething() {
-    // ...
-    logger.info("My Message");  // Compliant, output via logger
-    // ...
-  } 
+	    
 	    public void adminLogin1(String username, String password) {
 	        
 	        userDatabase11.put("yara", "yara123"); 
@@ -480,9 +473,11 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        }
 
 	        public Program(String name2, String focusArea2, String difficultyLevel2, String schedule) {
+				// TODO Auto-generated constructor stub
 			}
 
 			public Program(String name2, String focusArea2, String difficultyLevel) {
+				// TODO Auto-generated constructor stub
 			}
 
 			public String getName() {
@@ -1187,7 +1182,7 @@ private FitnessProgram program1;
 	                    this.title = sessionTitle;
 	                    this.sessionDate = date;
 	                    this.sessionTime = time;
-	                    this.scheduled = true;  // Mark the session as scheduled
+	                    this.scheduled = true;
 	                    System.out.println("Session scheduled for: " + date + " at " + time);
 	                } else {
 	                    System.out.println("Invalid session details.");
@@ -1318,7 +1313,7 @@ private FitnessProgram program1;
 	                return program;
 	            }
 	        }
-	        return null; // Return null if not found
+	        return null;
 	    }
 
 	    public void addNewFitnessProgram(String programName, String description, String category, int duration) {
@@ -1335,7 +1330,7 @@ private FitnessProgram program1;
 	        private String programName;
 	        private String description;
 	        private String category;
-	        private int duration;  // Duration in days
+	        private int duration;
 
 	        public void FitnessProgram(String programName, String description, String category, int duration) {
 	            this.programName = programName;
@@ -1465,7 +1460,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // For testing: List of enrolled clients
 	    public List<String> getEnrolledClients() {
 	        List<String> enrolledClients = new ArrayList<>();
 	        enrolledClients.add("Client1");
@@ -1479,13 +1473,10 @@ private FitnessProgram program1;
 	    
 	    private Map<String, List<String>> clientMessages = new HashMap<>();
 
-	    // Simulated storage for forum messages (forum message -> responses)
 	    private Map<String, List<String>> forumMessages = new HashMap<>();
 
-	    // Simulated client progress (client name -> progress details)
 	    private Map<String, String> clientProgress = new HashMap<>();
 
-	    // Method to view client messages (retrieve from the clientMessages map)
 	    public void viewClientMessages(String clientName) {
 	        if (clientMessages.containsKey(clientName)) {
 	            List<String> messages = clientMessages.get(clientName);
@@ -1498,7 +1489,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Method to reply to a forum message (store the response)
 	    public void replyToMessage(String forumMessage, String clientName) {
 	        if (forumMessages.containsKey(forumMessage)) {
 	            List<String> responses = forumMessages.get(forumMessage);
@@ -1510,7 +1500,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Method to verify forum response (check the correctness of a response)
 	    public void verifyForumResponse(String forumMessage, String response) {
 	        if (forumMessages.containsKey(forumMessage)) {
 	            List<String> responses = forumMessages.get(forumMessage);
@@ -1524,7 +1513,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Method to review client progress (store or update progress details)
 	    public void reviewClientProgress(String clientName, int progress, String clientStatus) {
 	        if (progress < 0 || progress > 100) {
 	            System.out.println("Invalid progress percentage. It should be between 0 and 100.");
@@ -1536,7 +1524,6 @@ private FitnessProgram program1;
 	        System.out.println("Reviewed progress for " + clientName + ": " + progressDetails);
 	    }
 
-	    // Methods to simulate adding client messages or forum messages for testing
 	    public void addClientMessage(String clientName, String message) {
 	        clientMessages.putIfAbsent(clientName, new ArrayList<>());
 	        clientMessages.get(clientName).add(message);
@@ -1558,7 +1545,6 @@ private FitnessProgram program1;
 	        System.out.println("Progress report written for " + clientName + ": " + progressReport);
 	    }
 
-	    // Method to send the progress report (simulating sending via a message or email)
 	    public void sendProgressReport(String clientName) {
 	        if (clientProgressReports.containsKey(clientName)) {
 	            List<String> reports = clientProgressReports.get(clientName);
@@ -1591,22 +1577,17 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Simulated method to add client progress statistics for testing purposes
 	    public void addClientProgressStatistics(String clientName, String progress) {
 	        clientProgressStatistics.put(clientName, progress);
 	    }
 
-	    // Testing the methods
-	  
+
 	    private Map<String, Integer> missedSessions = new HashMap<>();
 	    private Map<String, Boolean> motivationalMessagesSent = new HashMap<>();
 
-	    // Simulated storage for client progress data (client name -> progress data)
 	    private Map<String, Boolean> clientProgressDataVerified = new HashMap<>();
 
-	    // Method to verify if client progress data is valid
 	    public boolean verifyClientProgressData(String clientName) {
-	        // Check if progress data for the client is available and valid
 	        if (clientProgressDataVerified.containsKey(clientName) && clientProgressDataVerified.get(clientName)) {
 	            System.out.println("Client progress data for " + clientName + " is verified.");
 	            return true;
@@ -1616,7 +1597,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Method to record missed sessions for a client
 	    public void recordMissedSessions(String clientName, int missedCount) {
 	        missedSessions.put(clientName, missedSessions.getOrDefault(clientName, 0) + missedCount);
 	        System.out.println(clientName + " has missed " + missedSessions.get(clientName) + " sessions.");
@@ -1645,8 +1625,7 @@ private FitnessProgram program1;
 	        clientProgressDataVerified.put(clientName, isVerified);
 	    }
 
-	    // Testing the methods
-	   
+
 
 	    private Map<String, String> sessionSchedule = new HashMap<>();
 	    private Map<String, List<String>> participantsNotification = new HashMap<>();
@@ -1666,13 +1645,10 @@ private FitnessProgram program1;
 	    }
 
 	    public String updateSessionSchedule(String sessionId, String newTime) {
-	        // Check if the session exists
 	        if (sessions.containsKey(sessionId)) {
-	            // Update session schedule with the new time
 	            String oldTime = sessions.get(sessionId);
 	            sessions.put(sessionId, newTime);
 	            System.out.println("Session ID " + sessionId + " has been rescheduled from " + oldTime + " to " + newTime);
-	            // Notify participants
 	            areParticipantsNotified(newTime);
 	            return "Session rescheduled successfully.";
 	        } else {
@@ -1680,13 +1656,9 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Method to check if participants are notified about the session update
 	    public boolean areParticipantsNotified(String sessionUpdateDetails) {
-	        // In real scenario, you would send notifications (emails, SMS, etc.).
-	        // For now, we'll simulate that by adding session updates to a list of notified participants.
 	        System.out.println("Notifying participants about the session update: " + sessionUpdateDetails);
 	        
-	        // Simulate participants being notified
 	        List<String> participants = new ArrayList<>();
 	        participants.add("Instructor1");
 	        participants.add("Client1");
@@ -1694,11 +1666,9 @@ private FitnessProgram program1;
 
 	        participantsNotification.put(sessionUpdateDetails, participants);
 	        
-	        // Return true if notification was successfully sent (simulated)
 	        return true;
 	    }
 
-	    // Simulate a method that adds a session for demonstration purposes
 	    public void addSession(String sessionId, String sessionTime) {
 	        sessions.put(sessionId, sessionTime);
 	        System.out.println("Session " + sessionId + " added at time: " + sessionTime);
@@ -1710,21 +1680,16 @@ private FitnessProgram program1;
 	    private Map<String, List<String>> clientNotifications = new HashMap<>();
 	    private List<String> clients = new ArrayList<>(Arrays.asList("Client1", "Client2", "Client3"));
 
-	    // Method to launch a new program and store its details
 	    public void launchNewProgram(String programTitle) {
-	        // Check if the program already exists
 	        if (programs.contains(programTitle)) {
 	            System.out.println("Program with the title " + programTitle + " already exists.");
 	        } else {
-	            // Launch the new program
 	            ((Map<String, String>) programs).put(programTitle, "Program details for " + programTitle);
 	            System.out.println("New program launched: " + programTitle);
 	        }
 	    }
 
-	    // Method to send an announcement to clients
 	    public String sendProgramAnnouncement(String programDetails) {
-	        // Check if the program details are valid
 	        if (programDetails == null || programDetails.isEmpty()) {
 	            return "Invalid program details. Cannot send announcement.";
 	        }
@@ -1732,8 +1697,6 @@ private FitnessProgram program1;
 	        
 	        // Simulate sending announcements to clients
 	        for (String client : clients) {
-	            // In a real scenario, we would send an email or notification to the client
-	            // For now, we'll simulate this by adding the announcement to the list of notifications
 	            if (!clientNotifications.containsKey(client)) {
 	                clientNotifications.put(client, new ArrayList<>());
 	            }
@@ -1743,9 +1706,7 @@ private FitnessProgram program1;
 	        return "Announcement sent successfully to all clients.";
 	    }
 
-	    // Method to check if clients have been notified about the program
 	    public boolean areClientsNotifiedOfProgram(String programAnnouncementDetails) {
-	        // Iterate through the clients and check if they've been notified
 	        boolean allNotified = true;
 	        for (String client : clients) {
 	            List<String> notifications = clientNotifications.get(client);
@@ -1904,7 +1865,6 @@ private FitnessProgram program1;
 	        System.out.println("Dietary preferences added for " + clientName + ": " + preferences);
 	    }
 
-	    // Method to add a milestone for a user
 	    public void addMilestone(String username, String milestone) {
 	        if (!userMilestones1.containsKey(username)) {
 	            userMilestones1.put(username, new ArrayList<>());
@@ -1912,7 +1872,6 @@ private FitnessProgram program1;
 	        userMilestones1.get(username).add(milestone);
 	    }
 
-	    // Method to award a badge to a user
 	    public void awardBadge(String username, String badge) {
 	        if (!userBadges1.containsKey(username)) {
 	            userBadges1.put(username, new ArrayList<>());
@@ -1923,26 +1882,20 @@ private FitnessProgram program1;
 	    // Example of usage
 	   
 
-	    // Simulated storage for user profiles and dietary preferences
 	    private Map<String, Map<String, Object>> profiles = new HashMap<>();
 	    private Map<String, List<String>> dietaryPreferences1 = new HashMap<>();
 
-	    // This variable will store if the profile creation form was successfully submitted
 	    private boolean profileCreated = false;
 
-	    // Submit the profile creation form
 	    public void submitProfileCreationForm(String username, String name, int age, String fitnessGoals) {
-	        // Simulating form submission logic
 	        if (!profiles.containsKey(username)) {
 	            Map<String, Object> profileData = new HashMap<>();
 	            profileData.put("name", name);
 	            profileData.put("age", age);
 	            profileData.put("fitnessGoals", fitnessGoals);
 
-	            // Add the profile to the profiles map
 	            profiles.put(username, profileData);
 
-	            // Profile is created
 	            profileCreated = true;
 
 	            System.out.println("Profile for " + username + " has been successfully created.");
@@ -1951,7 +1904,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Submit dietary preferences form
 	    public void submitDietaryPreferencesForm(String username, List<String> preferences) {
 	        if (profiles.containsKey(username)) {
 	            dietaryPreferences.put(username, preferences);
@@ -1961,16 +1913,12 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Check if the profile has been successfully created
 	    public boolean isProfileCreated(String username) {
-	        // Return whether the profile for the username exists in the profiles map
 	        return profiles.containsKey(username);
 	    }
 
-	    // Get the profile creation confirmation (confirmation message or profile details)
 	    public Object getProfileCreationConfirmation(String username) {
 	        if (profiles.containsKey(username)) {
-	            // Return profile data as confirmation
 	            return profiles.get(username);
 	        } else {
 	            return "Profile for " + username + " not found.";
@@ -1984,7 +1932,6 @@ private FitnessProgram program1;
 	    private boolean profileUpdated = false;
 	    private boolean dietaryPreferencesUpdated = false;
 
-	    // Submit the profile creation form
 	    public void submitProfileCreationForm1(String username, String name, int age, String fitnessGoals) {
 	        if (!profiles.containsKey(username)) {
 	            Map<String, Object> profileData = new HashMap<>();
@@ -1992,7 +1939,6 @@ private FitnessProgram program1;
 	            profileData.put("age", age);
 	            profileData.put("fitnessGoals", fitnessGoals);
 
-	            // Add the profile to the profiles map
 	            profiles.put(username, profileData);
 
 	            System.out.println("Profile for " + username + " has been successfully created.");
@@ -2001,7 +1947,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Submit dietary preferences form
 	    public void submitDietaryPreferencesForm1(String username, List<String> preferences) {
 	        if (profiles.containsKey(username)) {
 	            dietaryPreferences.put(username, preferences);
@@ -2012,12 +1957,10 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Check if dietary preferences are updated
 	    public boolean isDietaryPreferencesUpdated() {
 	        return dietaryPreferencesUpdated;
 	    }
 
-	    // Get dietary update confirmation
 	    public Object getDietaryUpdateConfirmation() {
 	        if (dietaryPreferencesUpdated) {
 	            return "Dietary preferences have been successfully updated.";
@@ -2026,7 +1969,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Update profile details
 	    public void updateProfile(String username, String newName, int newAge, String newFitnessGoals) {
 	        if (profiles.containsKey(username)) {
 	            Map<String, Object> profile = profiles.get(username);
@@ -2057,10 +1999,8 @@ private FitnessProgram program1;
 
 	    private Map<String, ClientProfile> clientProfiles = new HashMap<>();
 	    
-	    // Store the last error message
 	    private String errorMessage = "";
 
-	    // Class to hold client profile data
 	    class ClientProfile {
 	        int age;
 	        String fitnessGoals;
@@ -2070,14 +2010,12 @@ private FitnessProgram program1;
 	            this.fitnessGoals = fitnessGoals;
 	        }
 
-	        // Update client details
 	        public void updateDetails(int age, String fitnessGoals) {
 	            this.age = age;
 	            this.fitnessGoals = fitnessGoals;
 	        }
 	    }
 
-	    // Create a new profile for a client
 	    public void createProfile(String clientName, int age, String fitnessGoals) {
 	        if (!clientProfiles.containsKey(clientName)) {
 	            ClientProfile newProfile = new ClientProfile(age, fitnessGoals);
@@ -2089,7 +2027,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Update client details like age and fitness goals
 	    public void updateClientDetails(String clientName, int age, String fitnessGoals) {
 	        if (clientProfiles.containsKey(clientName)) {
 	            ClientProfile profile = clientProfiles.get(clientName);
@@ -2101,7 +2038,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Submit profile update confirmation
 	    public void submitProfileUpdate(String clientName) {
 	        if (clientProfiles.containsKey(clientName)) {
 	            System.out.println("Profile update for " + clientName + " has been submitted successfully.");
@@ -2111,18 +2047,14 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Get the latest error message
 	    public Object getErrorMessage() {
 	        return errorMessage.isEmpty() ? "No error occurred." : errorMessage;
 	    }
 
-	 // Store ratings and reviews
 	    private Map<String, List<Review>> userFeedbackMap = new HashMap<>();
 	    
-	    // Store improvement suggestions
 	    private List<String> improvementSuggestions = new ArrayList<>();
 
-	    // Nested class to represent a review
 	    static class Review {
 	        int rating;
 	        String review;
@@ -2138,26 +2070,22 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Method to submit a rating
 	    public int submitRating(int rating) {
 	        if (rating < 1 || rating > 5) {
 	            System.out.println("Invalid rating. Please submit a rating between 1 and 5.");
 	            return -1;  // Invalid rating
 	        }
 
-	        // Assume we submit the rating here (e.g., for a specific user)
 	        System.out.println("Rating submitted: " + rating);
 	        return rating;  // Return the rating that was submitted
 	    }
 
-	    // Method to submit a review
 	    public String submitReview(String reviewText) {
 	        if (reviewText == null || reviewText.isEmpty()) {
 	            System.out.println("Review cannot be empty.");
 	            return null;
 	        }
 
-	        // Assume a default username (can be extended to use actual user data)
 	        String username = "User1"; 
 	        Review review = new Review(5, reviewText);  // Assume a 5-star rating for simplicity
 	        userFeedbackMap.computeIfAbsent(username, k -> new ArrayList<>()).add(review);
@@ -2190,7 +2118,6 @@ private FitnessProgram program1;
 	        return suggestion;
 	    }
 
-	    // Method to view all improvement suggestions
 	    public void viewImprovementSuggestions() {
 	        if (improvementSuggestions.isEmpty()) {
 	            System.out.println("No improvement suggestions yet.");
@@ -2202,7 +2129,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Method to view all reviews
 	    public void viewAllReviews() {
 	        if (userFeedbackMap.isEmpty()) {
 	            System.out.println("No reviews submitted yet.");
@@ -2218,19 +2144,14 @@ private FitnessProgram program1;
 	    }
 
 
-	    // Store improvement suggestions
 	    private List<String> improvementSuggestions1 = new ArrayList<>();
 	    private List<String> notifiedInstructors = new ArrayList<>();
 
-	    // Store programs with difficulty levels
 	    private Map<String, String> availablePrograms1 = new HashMap<>();
 
-	    // Store users' browsing activity
 	    private List<String> userBrowsingHistory = new ArrayList<>();
 
-	    // Simulate instructor notification system
 	    public boolean isInstructorNotifiedOfSuggestion(String improvementSuggestion) {
-	        // Check if the instructor has been notified about this suggestion
 	        if (notifiedInstructors.contains(improvementSuggestion)) {
 	            System.out.println("Instructor has been notified of the suggestion: " + improvementSuggestion);
 	            return true;
@@ -2240,7 +2161,6 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Check if the suggestion has been recorded
 	    public boolean isSuggestionRecorded(String improvementSuggestion) {
 	        if (improvementSuggestions.contains(improvementSuggestion)) {
 	            System.out.println("The suggestion has been recorded: " + improvementSuggestion);
@@ -2251,10 +2171,8 @@ private FitnessProgram program1;
 	        }
 	    }
 
-	    // Simulate navigating to the program browsing page
 	    public void navigateToProgramBrowsingPage() {
 	        System.out.println("Navigating to Program Browsing Page...");
-	        // Add a dummy browsing history
 	        userBrowsingHistory.add("User navigated to Program Browsing Page");
 	    }
 
