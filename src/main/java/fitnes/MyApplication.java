@@ -30,7 +30,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        
 	        if (userDatabase11.containsKey(username) && userDatabase11.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("Admin logged in successfully.");
+	            System.out.println("y");
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -92,7 +92,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        }
 	    }
 
-
+y="Admin logged in successfully."
 	    private Map<String, String> userDatabase14 = new HashMap<>();
 	    private boolean isAdminLoggedIn14 = false;
 	    private String currentPage = "";
@@ -102,7 +102,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        
 	        if (userDatabase11.containsKey(username) && userDatabase11.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("Admin logged in successfully.");
+	            System.out.println("y");
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -154,7 +154,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        
 	        if (userDatabase14.containsKey(username) && userDatabase14.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("Admin logged in successfully.");
+	            System.out.println("y");
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -236,7 +236,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        
 	        if (userDatabase14.containsKey(username) && userDatabase14.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("Admin logged in successfully.");
+	            System.out.println("y");
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -389,7 +389,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 
 	        if (userDatabase.containsKey(username) && userDatabase.get(username).equals(password)) {
 	            isAdminLoggedIn = true;
-	            System.out.println("Admin logged in successfully.");
+	            System.out.println("y");
 	        } else {
 	            System.out.println("Invalid admin username or password.");
 	        }
@@ -969,7 +969,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        AccountDetails account = adminAccounts.get(email);
 	        if (account != null && account.getPassword().equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("Admin logged in successfully.");
+	            System.out.println("y");
 	        } else {
 	            System.out.println("Invalid admin email or password.");
 	        }
