@@ -12,6 +12,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.logging.Logger;
+
 
 import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 
@@ -21,9 +23,14 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	    private Map<String, String> userDatabase11 = new HashMap<>();
 	    private boolean isAdminLoggedIn1 = false;
 	    private String currentPage1 = "";
-		
+		  Logger logger = Logger.getLogger(getClass().getName());
+
 	    
-	    
+	    public void doSomething() {
+    // ...
+    logger.info("My Message");  // Compliant, output via logger
+    // ...
+  } 
 	    public void adminLogin1(String username, String password) {
 	        
 	        userDatabase11.put("yara", "yara123"); 
