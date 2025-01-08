@@ -30,7 +30,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        
 	        if (userDatabase11.containsKey(username) && userDatabase11.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println(y);
+	            System.out.println("Admin logged in successfully.");
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -92,7 +92,7 @@ import io.cucumber.cienvironment.internal.com.eclipsesource.json.ParseException;
 	        }
 	    }
 
-y="Admin logged in successfully."
+
 	    private Map<String, String> userDatabase14 = new HashMap<>();
 	    private boolean isAdminLoggedIn14 = false;
 	    private String currentPage = "";
@@ -102,7 +102,7 @@ y="Admin logged in successfully."
 	        
 	        if (userDatabase11.containsKey(username) && userDatabase11.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println(y);
+	            System.out.println("Admin logged in successfully.");
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -154,7 +154,7 @@ y="Admin logged in successfully."
 	        
 	        if (userDatabase14.containsKey(username) && userDatabase14.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println(y);
+	            System.out.println("Admin logged in successfully.");
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -236,7 +236,7 @@ y="Admin logged in successfully."
 	        
 	        if (userDatabase14.containsKey(username) && userDatabase14.get(username).equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println(y);
+	            System.out.println("Admin logged in successfully.");
 	        } else {
 	            System.out.println("Invalid username or password.");
 	        }
@@ -389,7 +389,7 @@ y="Admin logged in successfully."
 
 	        if (userDatabase.containsKey(username) && userDatabase.get(username).equals(password)) {
 	            isAdminLoggedIn = true;
-	            System.out.println("y");
+	            System.out.println("Admin logged in successfully.");
 	        } else {
 	            System.out.println("Invalid admin username or password.");
 	        }
@@ -473,11 +473,9 @@ y="Admin logged in successfully."
 	        }
 
 	        public Program(String name2, String focusArea2, String difficultyLevel2, String schedule) {
-				// TODO Auto-generated constructor stub
 			}
 
 			public Program(String name2, String focusArea2, String difficultyLevel) {
-				// TODO Auto-generated constructor stub
 			}
 
 			public String getName() {
@@ -969,7 +967,7 @@ y="Admin logged in successfully."
 	        AccountDetails account = adminAccounts.get(email);
 	        if (account != null && account.getPassword().equals(password)) {
 	            isAdminLoggedIn1 = true;
-	            System.out.println("y");
+	            System.out.println("Admin logged in successfully.");
 	        } else {
 	            System.out.println("Invalid admin email or password.");
 	        }
