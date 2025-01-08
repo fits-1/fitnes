@@ -24,7 +24,7 @@ public class Menuy {
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -137,7 +137,7 @@ public class Menuy {
     private static Map<String, List<String>> instructorCourses = new HashMap<>();
 
     private static void instructorFeatures(Scanner scanner) {
-        String currentInstructorEmail = ""; // استرجاع البريد الإلكتروني للمدرب الذي قام بتسجيل الدخول
+        String currentInstructorEmail = ""; 
         while (true) {
             System.out.println("\nInstructor Features Menu:");
             System.out.println("1. View My Courses");
@@ -146,7 +146,7 @@ public class Menuy {
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // استهلاك السطر الجديد
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -156,7 +156,7 @@ public class Menuy {
                     addInstructorCourse(scanner, currentInstructorEmail);
                     break;
                 case 3:
-                    return; // العودة إلى القائمة الرئيسية
+                    return; 
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
@@ -177,7 +177,6 @@ public class Menuy {
         }
     }
 
-    // إضافة دورة جديدة للمدرب الحالي
     private static void addInstructorCourse(Scanner scanner, String instructorEmail) {
         System.out.print("Enter the course name: ");
         String courseName = scanner.nextLine();
@@ -191,7 +190,6 @@ public class Menuy {
         System.out.print("Enter Goals: ");
         String goals = scanner.nextLine();
 
-        // تخزين المعلومات في قائمة الدورات للمدرب
         instructorCourses.putIfAbsent(instructorEmail, new ArrayList<>());
         String courseDetails = "Title: " + title + " | Duration: " + duration + " | Difficulty: " + difficulty + " | Goals: " + goals;
         instructorCourses.get(instructorEmail).add(courseName + " - " + courseDetails);
@@ -211,7 +209,7 @@ public class Menuy {
                 System.out.print("Enter your choice: ");
 
                 int choice = scanner.nextInt();
-                scanner.nextLine(); // Consuming newline character after nextInt()
+                scanner.nextLine(); 
 
                 switch (choice) {
                     case 1:
@@ -233,7 +231,7 @@ public class Menuy {
                         deactivateInstructor(scanner);
                         break;
                     case 7:
-                        return; // Go back to Admin Menu
+                        return; 
                     default:
                         System.out.println("Invalid choice. Please try again.");
                 }
@@ -287,7 +285,6 @@ public class Menuy {
 
         private static void addInstructor3S(Scanner scanner)
  {
-            // تحقق من تهيئة الـ Map
             if (instructorAccounts == null) {
                 instructorAccounts = new HashMap<>();
             }
@@ -358,7 +355,7 @@ public class Menuy {
                 System.out.print("Enter your choice: ");
 
                 int choice = scanner.nextInt();
-                scanner.nextLine(); // Consume the newline character
+                scanner.nextLine(); 
 
                 switch (choice) {
                     case 1:
@@ -438,14 +435,13 @@ public class Menuy {
                         break;
                     case 12:
                         System.out.println("Returning to Main Menu...");
-                        return; // Exit to main menu
+                        return; 
                     default:
                         System.out.println("Invalid choice. Please try again.");
                 }
             }
         }
 
-    // Admin User Management
     private static void userManagement(Scanner scanner) {
         while (true) {
             System.out.println("\n--- User Management ---");
@@ -459,7 +455,7 @@ public class Menuy {
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consuming newline character after nextInt()
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -481,7 +477,7 @@ public class Menuy {
                     deactivateInstructor(scanner);
                     break;
                 case 7:
-                    return; // Go back to Admin Menu
+                    return; 
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
@@ -533,7 +529,6 @@ public class Menuy {
     }
 
     private static void addInstructor(Scanner scanner) {
-        // تحقق من تهيئة الـ Map
         if (instructorAccounts == null) {
             instructorAccounts = new HashMap<>();
         }
